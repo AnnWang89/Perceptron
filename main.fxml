@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="_main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nn.hw1.Controller.MainController">
+   <children>
+      <Button layoutX="54.0" layoutY="219.0" mnemonicParsing="false" onAction="#_perceptron1_button" text="perceptron1" />
+      <Button layoutX="54.0" layoutY="256.0" mnemonicParsing="false" onAction="#_perceptron2_button" text="perceptron2" />
+      <Button layoutX="55.0" layoutY="294.0" mnemonicParsing="false" onAction="#_2Ccircle1_button" text="2Ccircle1" />
+      <Button layoutX="54.0" layoutY="328.0" mnemonicParsing="false" onAction="#_2Circle1_button" text="2Circle1" />
+      <Button layoutX="55.0" layoutY="364.0" mnemonicParsing="false" onAction="#_2Circle2_button" text="2Circle2" />
+      <Button layoutX="54.0" layoutY="402.0" mnemonicParsing="false" onAction="#_2CloseS_button" text="2CloseS" />
+      <Button layoutX="54.0" layoutY="438.0" mnemonicParsing="false" onAction="#_2CloseS2_button" text="2CloseS2" />
+      <Button layoutX="55.0" layoutY="476.0" mnemonicParsing="false" onAction="#_2CloseS3_button" text="2CloseS3" />
+      <Button layoutX="54.0" layoutY="514.0" mnemonicParsing="false" onAction="#_2cring_button" text="2cring" />
+      <Button layoutX="54.0" layoutY="552.0" mnemonicParsing="false" onAction="#_2CS_button" text="2CS" />
+      <Button layoutX="54.0" layoutY="590.0" mnemonicParsing="false" onAction="#_2Hcircle1_button" text="2Hcircle1" />
+      <Button layoutX="57.0" layoutY="628.0" mnemonicParsing="false" onAction="#_2ring_button" text="2ring" />
+      <Text fill="#465364" layoutX="54.0" layoutY="200.0" stroke="#391111" strokeType="OUTSIDE" strokeWidth="0.0" text="2 Dimention" wrappingWidth="187.89990234375">
+         <font>
+            <Font name="Rockwell Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2fff6" height="650.0" layoutX="275.0" layoutY="75.0" stroke="#001554" strokeType="INSIDE" width="650.0" />
+      <Line fx:id="_line1" endX="300.0" layoutX="600.0" layoutY="400.0" startX="-300.0" />
+      <Line fx:id="_line2" endY="300.0" layoutX="600.0" layoutY="400.0" startY="-300.0" />
+      <Line fx:id="_line3" endX="20.0" endY="20.0" layoutX="600.0" layoutY="100.0" />
+      <Line fx:id="_line4" endX="-20.0" endY="20.0" layoutX="600.0" layoutY="100.0" />
+      <Line fx:id="_line5" endX="-20.0" endY="-20.0" layoutX="900.0" layoutY="400.0" />
+      <Line fx:id="_line6" endX="-20.0" endY="20.0" layoutX="900.0" layoutY="400.0" />
+      <Slider fx:id="_learning_rate" blockIncrement="0.01" layoutX="168.0" layoutY="27.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" onMouseReleased="#onSliderChanged_learning_rate" prefHeight="37.0" prefWidth="188.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="0.8" />
+      <Text fill="#707092" layoutX="68.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning rate">
+         <font>
+            <Font name="Rockwell" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="_correct_rate_train" fill="#707092" layoutX="933.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct rate train" wrappingWidth="194.2733154296876">
+         <font>
+            <Font name="Rockwell" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="_synaptic_weights" fill="#707092" layoutX="933.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Synaptic Weights" wrappingWidth="274.55035400390625">
+         <font>
+            <Font name="Rockwell" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="_choose_file" fill="#7f143f" layoutX="31.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="4.0" text=" File Name" wrappingWidth="274.55035400390625">
+         <font>
+            <Font name="Rockwell" size="39.0" />
+         </font>
+      </Text>
+      <Text fill="#707092" layoutX="371.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Learning times">
+         <font>
+            <Font name="Rockwell" size="15.0" />
+         </font>
+      </Text>
+      <Slider fx:id="_learning_times" blockIncrement="50.0" layoutX="478.0" layoutY="28.0" majorTickUnit="100.0" max="3500.0" min="200.0" minorTickCount="1" onMouseReleased="#onSliderChanged_learning_times" prefHeight="37.0" prefWidth="711.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="800.0" />
+      <Text fx:id="_correct_rate_test" fill="#707092" layoutX="933.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correct rate test" wrappingWidth="194.2733154296876">
+         <font>
+            <Font name="Rockwell" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="_loading" fill="#6f124d" layoutX="944.0" layoutY="702.0" stroke="#710a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading..." visible="false">
+         <font>
+            <Font name="Rockwell" size="33.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="_w_checkbox" layoutX="59.0" layoutY="671.0" mnemonicParsing="false" onMouseReleased="#Check_W" text="w=(-1,0,1)">
+         <font>
+            <Font name="Rockwell" size="17.0" />
+         </font>
+      </CheckBox>
+   </children>
+</Pane>
